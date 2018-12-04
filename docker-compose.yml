@@ -7,7 +7,10 @@ services:
       - mysql
     build: .
     image: flyway-image:0.9
-
+    environment:
+      - PASSWORD=test
+      - USER=root
+      - DSN=jdbc:mysql://mysql-container:3306/exemple
 
   mysql:
     container_name: mysql-container
